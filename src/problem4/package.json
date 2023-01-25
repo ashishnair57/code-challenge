@@ -1,0 +1,16 @@
+{
+  "name": "problem-4",
+  "version": "1.0.0",
+  "description": "Interacting with Chain",
+  "main": "retrieve-holders.ts",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./retrieve-holders.ts"
+  },
+  "author": "Ashish Nair <https://ashis.sh>",
+  "license": "ISC"
+}

@@ -1,29 +1,47 @@
-<html>
-
+<html class="no-js" lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Form</title>
 
-  <!-- You may add more stuff here -->
-  <link href="style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="style.css" rel="stylesheet" />
 </head>
-
 <body>
+    <div class="container mt-5">
+        <div class="card">
+            <h5 class="card-header text-center">Transfer Funds</h5>
+            <div class="card-body">
+                <form role="form" action="javascript:void(0);" onSubmit="onSubmitHandler(this)" id="transfer-form">
 
-  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <label for="input-address">ETH Address</label>
-    <input id="input-address" />
+                    <div class="form-group">
+                        <label for="input-address">ETH Address</label>
+                        <input type="text" class="form-control" name="inputaddress" data-error="Please enter ethereum address." id="input-address" placeholder="ETH Address" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors address"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-amount">Amount to send</label>
+                        <input type="number" class="form-control" name="inputamount" data-error="Please enter amount to send." id="input-amount" placeholder="Amount to send" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors amount"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-otp">OTP Authentication</label>
+                        <input type="number" class="form-control" name="inputotp" data-error="Please enter otp." maxlength="6" minlength="1" id="input-otp" placeholder="OTP Authentication" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors otp"></div>
+                    </div>
 
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
-
-    <label for="input-otp">OTP Authentication</label>
-    <input type="number" id="input-otp" />
-
-    <button>SEND TOKENS</button>
-  </form>
-  <script src="script.js"></script>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit" id="transfer-button">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

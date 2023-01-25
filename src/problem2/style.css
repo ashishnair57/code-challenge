@@ -1,8 +1,17 @@
 body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-width: 360px;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0368AD;
+}
+.container {
+  max-width: 550px;
+}
+.has-error label,
+.has-error input,
+.has-error textarea {
+  color: red;
+  border-color: red;
+}
+.list-unstyled li {
+  font-size: 13px;
+  padding: 4px 0 0;
+  color: red;
 }
