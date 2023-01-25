@@ -3,7 +3,7 @@
 ## Run file
 
 ```bash
-node problem\ 1/index.js
+node index.js
 ````
 
 ## Output: When n = 5
